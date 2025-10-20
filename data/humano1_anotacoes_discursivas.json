@@ -1,0 +1,549 @@
+{
+    "1": {
+        "exame_41_area_administrativo_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_41_area_administrativo_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_administrativo_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_41_area_administrativo_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "2": {
+        "exame_41_area_administrativo_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_41_area_administrativo_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_41_area_administrativo_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_41_area_administrativo_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "3": {
+        "exame_41_area_administrativo_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_41_area_administrativo_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_41_area_administrativo_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_41_area_administrativo_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "4": {
+        "exame_41_area_administrativo_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_41_area_administrativo_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_41_area_administrativo_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_41_area_administrativo_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "5": {
+        "exame_41_area_civil_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_41_area_civil_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_civil_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_41_area_civil_questao_numero_1_letra_B_parte_II": "Não",
+        "exame_41_area_civil_questao_numero_1_letra_B_parte_III": "Não",
+        "exame_41_area_civil_questao_numero_1_letra_B_parte_IV": "Não"
+    },
+    "6": {
+        "exame_41_area_civil_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_41_area_civil_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_41_area_civil_questao_numero_2_letra_A_parte_III": "Não",
+        "exame_41_area_civil_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_41_area_civil_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "7": {
+        "exame_41_area_civil_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_41_area_civil_questao_numero_3_letra_A_parte_II": "Sim",
+        "exame_41_area_civil_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_41_area_civil_questao_numero_3_letra_B_parte_II": "Não",
+        "exame_41_area_civil_questao_numero_3_letra_B_parte_III": "Não"
+    },
+    "8": {
+        "exame_41_area_civil_questao_numero_4_letra_A1_parte_I": "Sim",
+        "exame_41_area_civil_questao_numero_4_letra_A1_parte_II": "Não",
+        "exame_41_area_civil_questao_numero_4_letra_A2_parte_I": "Não",
+        "exame_41_area_civil_questao_numero_4_letra_A2_parte_II": "Sim",
+        "exame_41_area_civil_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_41_area_civil_questao_numero_4_letra_B_parte_II": "Sim",
+        "exame_41_area_civil_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "9": {
+        "exame_41_area_constitucional_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_constitucional_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_41_area_constitucional_questao_numero_1_letra_B_parte_II": "Sim",
+        "exame_41_area_constitucional_questao_numero_1_letra_A_parte_I": "Não"
+    },
+    "10": {
+        "exame_41_area_constitucional_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_41_area_constitucional_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_41_area_constitucional_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_41_area_constitucional_questao_numero_2_letra_B_parte_II": "Não",
+        "exame_41_area_constitucional_questao_numero_2_letra_B_parte_III": "Não"
+    },
+    "11": {
+        "exame_41_area_constitucional_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_41_area_constitucional_questao_numero_3_letra_A_parte_II": "Sim",
+        "exame_41_area_constitucional_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_41_area_constitucional_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "12": {
+        "exame_41_area_constitucional_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_41_area_constitucional_questao_numero_4_letra_A_parte_II": "Sim",
+        "exame_41_area_constitucional_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_41_area_constitucional_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "13": {
+        "exame_41_area_empresarial_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_1_letra_A_parte_II": "Sim",
+        "exame_41_area_empresarial_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_41_area_empresarial_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "14": {
+        "exame_41_area_empresarial_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_41_area_empresarial_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_41_area_empresarial_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "15": {
+        "exame_41_area_empresarial_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_41_area_empresarial_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "16": {
+        "exame_41_area_empresarial_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_41_area_empresarial_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_41_area_empresarial_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "17": {
+        "exame_41_area_penal_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_41_area_penal_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_penal_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_41_area_penal_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "18": {
+        "exame_41_area_penal_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_41_area_penal_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_41_area_penal_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_41_area_penal_questao_numero_2_letra_B_parte_II": "Sim"
+    },
+    "19": {
+        "exame_41_area_penal_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_41_area_penal_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_41_area_penal_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_41_area_penal_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "20": {
+        "exame_41_area_penal_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_41_area_penal_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_41_area_penal_questao_numero_4_letra_A_parte_III": "Não",
+        "exame_41_area_penal_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_41_area_penal_questao_numero_4_letra_B_parte_II": "Sim"
+    },
+    "21": {
+        "exame_41_area_tributário_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_41_area_tributário_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_tributário_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_41_area_tributário_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "22": {
+        "exame_41_area_tributário_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_41_area_tributário_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_41_area_tributário_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_41_area_tributário_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "23": {
+        "exame_41_area_tributário_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_41_area_tributário_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_41_area_tributário_questao_numero_3_letra_B_parte_II": "Não",
+        "exame_41_area_tributário_questao_numero_3_letra_A_parte_I": "Sim"
+    },
+    "25": {
+        "exame_41_area_trabalhista_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_41_area_trabalhista_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_41_area_trabalhista_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_41_area_trabalhista_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "26": {
+        "exame_41_area_trabalhista_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_41_area_trabalhista_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_41_area_trabalhista_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_41_area_trabalhista_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "28": {
+        "exame_41_area_trabalhista_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_41_area_trabalhista_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_41_area_trabalhista_questao_numero_4_letra_B_parte_II": "Não",
+        "exame_41_area_trabalhista_questao_numero_4_letra_A_parte_II": "Não"
+    },
+    "29": {
+        "exame_40_area_administrativo_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_40_area_administrativo_questao_numero_1_letra_A_parte_II": "Sim",
+        "exame_40_area_administrativo_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_40_area_administrativo_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "30": {
+        "exame_40_area_administrativo_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_administrativo_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_40_area_administrativo_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_40_area_administrativo_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "31": {
+        "exame_40_area_administrativo_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_40_area_administrativo_questao_numero_3_letra_A_parte_II": "Sim",
+        "exame_40_area_administrativo_questao_numero_3_letra_A_parte_III": "Não",
+        "exame_40_area_administrativo_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_40_area_administrativo_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "27": {
+        "exame_41_area_trabalhista_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_41_area_trabalhista_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_41_area_trabalhista_questao_numero_3_letra_B_parte_I": "Sim"
+    },
+    "32": {
+        "exame_40_area_administrativo_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_40_area_administrativo_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_40_area_administrativo_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_40_area_administrativo_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "33": {
+        "exame_40_area_trabalhista_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_40_area_trabalhista_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "34": {
+        "exame_40_area_trabalhista_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_trabalhista_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_40_area_trabalhista_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "35": {
+        "exame_40_area_trabalhista_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_40_area_trabalhista_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "36": {
+        "exame_40_area_trabalhista_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_40_area_trabalhista_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_40_area_trabalhista_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "37": {
+        "exame_40_area_empresarial_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_40_area_empresarial_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "38": {
+        "exame_40_area_empresarial_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_empresarial_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_empresarial_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_40_area_empresarial_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "39": {
+        "exame_40_area_empresarial_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_40_area_empresarial_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "40": {
+        "exame_40_area_empresarial_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_40_area_empresarial_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_40_area_empresarial_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "41": {
+        "exame_40_area_tributário_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_40_area_tributário_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_40_area_tributário_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_40_area_tributário_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "42": {
+        "exame_40_area_tributário_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_tributário_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_tributário_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_40_area_tributário_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "43": {
+        "exame_40_area_tributário_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_40_area_tributário_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_40_area_tributário_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_40_area_tributário_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "44": {
+        "exame_40_area_tributário_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_40_area_tributário_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_40_area_tributário_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_40_area_tributário_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "45": {
+        "exame_40_area_penal_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_40_area_penal_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_40_area_penal_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_40_area_penal_questao_numero_1_letra_B_parte_II": "Não",
+        "exame_40_area_penal_questao_numero_1_letra_B_parte_III": "Não"
+    },
+    "47": {
+        "exame_40_area_penal_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_40_area_penal_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_40_area_penal_questao_numero_3_letra_A_parte_III": "Não",
+        "exame_40_area_penal_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_40_area_penal_questao_numero_3_letra_B_parte_II": "Não",
+        "exame_40_area_penal_questao_numero_3_letra_B_parte_III": "Não"
+    },
+    "50": {
+        "exame_40_area_civil_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_civil_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_civil_questao_numero_2_letra_A_parte_III": "Sim",
+        "exame_40_area_civil_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_40_area_civil_questao_numero_2_letra_B_parte_II": "Sim",
+        "exame_40_area_civil_questao_numero_2_letra_B_parte_III": "Não"
+    },
+    "51": {
+        "exame_40_area_civil_questao_numero_3_letra_A1_parte_I": "Não",
+        "exame_40_area_civil_questao_numero_3_letra_A1_parte_II": "Sim",
+        "exame_40_area_civil_questao_numero_3_letra_A1_parte_III": "Não",
+        "exame_40_area_civil_questao_numero_3_letra_A1_parte_IV": "Não",
+        "exame_40_area_civil_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_40_area_civil_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "52": {
+        "exame_40_area_civil_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_40_area_civil_questao_numero_4_letra_A_parte_II": "Sim",
+        "exame_40_area_civil_questao_numero_4_letra_A_parte_III": "Não",
+        "exame_40_area_civil_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_40_area_civil_questao_numero_4_letra_B_parte_II": "Sim",
+        "exame_40_area_civil_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "46": {
+        "exame_40_area_penal_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_penal_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_penal_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_40_area_penal_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "48": {
+        "exame_40_area_penal_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_40_area_penal_questao_numero_4_letra_A_parte_II": "Sim",
+        "exame_40_area_penal_questao_numero_4_letra_A_parte_III": "Sim",
+        "exame_40_area_penal_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_40_area_penal_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "49": {
+        "exame_40_area_civil_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_40_area_civil_questao_numero_1_letra_A_parte_II": "Sim",
+        "exame_40_area_civil_questao_numero_1_letra_A_parte_III": "Não",
+        "exame_40_area_civil_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_40_area_civil_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "53": {
+        "exame_40_area_constitucional_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_40_area_constitucional_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "54": {
+        "exame_40_area_constitucional_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_40_area_constitucional_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_2_letra_B_parte_II": "Sim"
+    },
+    "55": {
+        "exame_40_area_constitucional_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_40_area_constitucional_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_40_area_constitucional_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "56": {
+        "exame_40_area_constitucional_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_40_area_constitucional_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_40_area_constitucional_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_40_area_constitucional_questao_numero_4_letra_B_parte_II": "Sim"
+    },
+    "57": {
+        "exame_39_area_administrativo_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "58": {
+        "exame_39_area_administrativo_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_2_letra_B_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_2_letra_B_parte_III": "Sim",
+        "exame_39_area_administrativo_questao_numero_2_letra_B_parte_IV": "Não",
+        "exame_39_area_administrativo_questao_numero_2_letra_B_parte_V": "Não"
+    },
+    "59": {
+        "exame_39_area_administrativo_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_39_area_administrativo_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "60": {
+        "exame_39_area_administrativo_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_39_area_administrativo_questao_numero_4_letra_B_parte_II": "Não",
+        "exame_39_area_administrativo_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "61": {
+        "exame_39_area_civil_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_1_letra_B_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_1_letra_B_parte_III": "Não",
+        "exame_39_area_civil_questao_numero_1_letra_A_parte_III": "Sim"
+    },
+    "62": {
+        "exame_39_area_civil_questao_numero_2_letra_A1_parte_I": "Não",
+        "exame_39_area_civil_questao_numero_2_letra_A1_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_2_letra_A2_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_2_letra_A2_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_39_area_civil_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "63": {
+        "exame_39_area_civil_questao_numero_3_letra_A1_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_3_letra_A1_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_3_letra_A2_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_3_letra_A2_parte_II": "Sim"
+    },
+    "64": {
+        "exame_39_area_civil_questao_numero_4_letra_A1_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_4_letra_A1_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_4_letra_A2_parte_I": "Sim",
+        "exame_39_area_civil_questao_numero_4_letra_A2_parte_II": "Sim",
+        "exame_39_area_civil_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_39_area_civil_questao_numero_4_letra_B_parte_II": "Não",
+        "exame_39_area_civil_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "65": {
+        "exame_39_area_constitucional_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_39_area_constitucional_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_constitucional_questao_numero_1_letra_A_parte_III": "Não",
+        "exame_39_area_constitucional_questao_numero_1_letra_B_parte_I": "Não",
+        "exame_39_area_constitucional_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "66": {
+        "exame_39_area_constitucional_questao_numero_2_letra_A_parte_I": "Sim",
+        "exame_39_area_constitucional_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_39_area_constitucional_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_39_area_constitucional_questao_numero_2_letra_B_parte_II": "Sim",
+        "exame_39_area_constitucional_questao_numero_2_letra_B_parte_III": "Não"
+    },
+    "67": {
+        "exame_39_area_constitucional_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_39_area_constitucional_questao_numero_3_letra_A_parte_II": "Sim",
+        "exame_39_area_constitucional_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_39_area_constitucional_questao_numero_3_letra_B_parte_II": "Sim",
+        "exame_39_area_constitucional_questao_numero_3_letra_B_parte_III": "Sim"
+    },
+    "68": {
+        "exame_39_area_constitucional_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_39_area_constitucional_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_39_area_constitucional_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_39_area_constitucional_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "69": {
+        "exame_39_area_trabalhista_questao_numero_1_letra_A_parte_I": "Não",
+        "exame_39_area_trabalhista_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_trabalhista_questao_numero_1_letra_A_parte_III": "Não",
+        "exame_39_area_trabalhista_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_trabalhista_questao_numero_1_letra_B_parte_II": "Sim",
+        "exame_39_area_trabalhista_questao_numero_1_letra_B_parte_III": "Não"
+    },
+    "70": {
+        "exame_39_area_trabalhista_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_39_area_trabalhista_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_39_area_trabalhista_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_39_area_trabalhista_questao_numero_2_letra_B_parte_II": "Sim"
+    },
+    "71": {
+        "exame_39_area_trabalhista_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_39_area_trabalhista_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_39_area_trabalhista_questao_numero_3_letra_A_parte_III": "Não",
+        "exame_39_area_trabalhista_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_39_area_trabalhista_questao_numero_3_letra_B_parte_II": "Sim",
+        "exame_39_area_trabalhista_questao_numero_3_letra_B_parte_III": "Não"
+    },
+    "72": {
+        "exame_39_area_trabalhista_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_39_area_trabalhista_questao_numero_4_letra_A_parte_II": "Sim",
+        "exame_39_area_trabalhista_questao_numero_4_letra_A_parte_III": "Não",
+        "exame_39_area_trabalhista_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_39_area_trabalhista_questao_numero_4_letra_B_parte_II": "Não",
+        "exame_39_area_trabalhista_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "73": {
+        "exame_39_area_empresarial_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_39_area_empresarial_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_empresarial_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_empresarial_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "74": {
+        "exame_39_area_empresarial_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_39_area_empresarial_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_39_area_empresarial_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_39_area_empresarial_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "75": {
+        "exame_39_area_empresarial_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_39_area_empresarial_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_39_area_empresarial_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_39_area_empresarial_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "76": {
+        "exame_39_area_empresarial_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_39_area_empresarial_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_39_area_empresarial_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_39_area_empresarial_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "77": {
+        "exame_39_area_tributário_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_39_area_tributário_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_tributário_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_tributário_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "78": {
+        "exame_39_area_tributário_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_39_area_tributário_questao_numero_2_letra_A_parte_II": "Sim",
+        "exame_39_area_tributário_questao_numero_2_letra_B_parte_I": "Não",
+        "exame_39_area_tributário_questao_numero_2_letra_B_parte_II": "Não"
+    },
+    "79": {
+        "exame_39_area_tributário_questao_numero_3_letra_A_parte_I": "Sim",
+        "exame_39_area_tributário_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_39_area_tributário_questao_numero_3_letra_B_parte_I": "Não",
+        "exame_39_area_tributário_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "80": {
+        "exame_39_area_tributário_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_39_area_tributário_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_39_area_tributário_questao_numero_4_letra_B_parte_I": "Não",
+        "exame_39_area_tributário_questao_numero_4_letra_B_parte_II": "Não",
+        "exame_39_area_tributário_questao_numero_4_letra_B_parte_III": "Não"
+    },
+    "81": {
+        "exame_39_area_penal_questao_numero_1_letra_A_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_1_letra_A_parte_II": "Não",
+        "exame_39_area_penal_questao_numero_1_letra_A_parte_III": "Não",
+        "exame_39_area_penal_questao_numero_1_letra_B_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_1_letra_B_parte_II": "Não"
+    },
+    "82": {
+        "exame_39_area_penal_questao_numero_2_letra_A_parte_I": "Não",
+        "exame_39_area_penal_questao_numero_2_letra_A_parte_II": "Não",
+        "exame_39_area_penal_questao_numero_2_letra_B_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_2_letra_B_parte_II": "Sim"
+    },
+    "83": {
+        "exame_39_area_penal_questao_numero_3_letra_A_parte_I": "Não",
+        "exame_39_area_penal_questao_numero_3_letra_A_parte_II": "Não",
+        "exame_39_area_penal_questao_numero_3_letra_B_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_3_letra_B_parte_II": "Não"
+    },
+    "84": {
+        "exame_39_area_penal_questao_numero_4_letra_A_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_39_area_penal_questao_numero_4_letra_A_parte_III": "Não",
+        "exame_39_area_penal_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_39_area_penal_questao_numero_4_letra_B_parte_II": "Não"
+    },
+    "24": {
+        "exame_41_area_tributário_questao_numero_4_letra_A_parte_I": "Não",
+        "exame_41_area_tributário_questao_numero_4_letra_A_parte_II": "Não",
+        "exame_41_area_tributário_questao_numero_4_letra_B_parte_I": "Sim",
+        "exame_41_area_tributário_questao_numero_4_letra_B_parte_II": "Não"
+    }
+}
