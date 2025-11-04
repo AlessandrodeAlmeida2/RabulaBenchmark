@@ -110,7 +110,7 @@ with col2:
 # Card 3: Vitórias
 with col3:
     st.markdown("Vitórias")
-    st.markdown(f"<div style='font-size: 1.9em; margin-top: -17px;'><b>GPT-4o-mini: {gpt_wins} | Sabiazinho 3: {sabiazinho_wins}</div>", unsafe_allow_html=True)
+    st.markdown(f"<div style='font-size: 1.6em; margin-top: -17px;'><b>GPT-4o-mini: {gpt_wins} | Sabiazinho 3: {sabiazinho_wins}</div>", unsafe_allow_html=True)
 
 # Adicionar espaço antes da tabela
 st.write("\n")
