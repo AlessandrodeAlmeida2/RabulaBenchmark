@@ -57,6 +57,64 @@ pivot_df = df_filtrado.pivot_table(
 if not pivot_df.empty and len(pivot_df.columns) > 1:
     pivot_df['Winner'] = pivot_df.idxmax(axis=1)
 
+# Debug: Verificar colunas e valores únicos
+print("Colunas do DataFrame:", df_scoreboard.columns.tolist())
+print("Modelos únicos:", df_scoreboard['model'].unique().tolist())
+print("Valores únicos na coluna de tarefa:", df_scoreboard[task_key].unique())
+
+# Calcular métricas para os cards
+try:
+    # Dados para o gpt-4o-mini
+    gpt_data = df_scoreboard[df_scoreboard['model'] == 'gpt-4o-mini']
+    gpt_avg = gpt_data[task_key].mean()
+    gpt_avg = round(gpt_avg, 2) if pd.notnull(gpt_avg) else 0.0
+    
+    # Dados para o sabiazinho_3
+    sabiazinho_data = df_scoreboard[df_scoreboard['model'] == 'sabiazinho_3']
+    sabiazinho_avg = sabiazinho_data[task_key].mean()
+    sabiazinho_avg = round(sabiazinho_avg, 2) if pd.notnull(sabiazinho_avg) else 0.0
+    
+    # Para debug
+    print(f"Média gpt-4o-mini: {gpt_avg}")
+    print(f"Média sabiazinho_3: {sabiazinho_avg}")
+    
+except Exception as e:
+    print("Erro ao calcular médias:", str(e))
+    gpt_avg = 0.0
+    sabiazinho_avg = 0.0
+
+# Contar vitórias por modelo
+if not pivot_df.empty and 'Winner' in pivot_df.columns:
+    win_counts = pivot_df['Winner'].value_counts().to_dict()
+    gpt_wins = win_counts.get('gpt-4o-mini', 0)
+    sabiazinho_wins = win_counts.get('sabiazinho_3', 0)
+    
+    # Para debug
+    print(f"Vitórias gpt-4o-mini: {gpt_wins}")
+    print(f"Vitórias sabiazinho_3: {sabiazinho_wins}")
+else:
+    gpt_wins = 0
+    sabiazinho_wins = 0
+
+# Criar 3 colunas para os cards
+col1, col2, col3 = st.columns(3)
+
+# Card 1: Média gpt-4o-mini
+with col1:
+    st.metric("Média gpt-4o-mini", f"{gpt_avg}")
+
+# Card 2: Média Sabiazinho 3
+with col2:
+    st.metric("Média Sabiazinho 3", f"{sabiazinho_avg}")
+
+# Card 3: Vitórias
+with col3:
+    st.markdown("Vitórias")
+    st.markdown(f"<div style='font-size: 1.9em; margin-top: -17px;'><b>GPT-4o-mini: {gpt_wins} | Sabiazinho 3: {sabiazinho_wins}</div>", unsafe_allow_html=True)
+
+# Adicionar espaço antes da tabela
+st.write("\n")
+
 # Exibir a tabela
 st.dataframe(pivot_df, use_container_width=True)
 st.write("\n")
