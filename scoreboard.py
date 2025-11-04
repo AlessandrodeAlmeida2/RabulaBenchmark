@@ -12,7 +12,7 @@ with st.spinner("Carregando arquivos..."):
 st.write("Competência de modelos de linguagem no domínio jurídico brasileiro.")
 
 # Dividir os checkboxes em colunas
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     # Multiselect de modelos na primeira coluna
@@ -22,35 +22,62 @@ with col2:
     # Multiselect de áreas na segunda coluna
     area = st.multiselect("Área: ", df_scoreboard["evaluated_area"].unique().tolist())
 
+with col3:
+    # Dropdown para seleção de tarefas
+    task_options = {
+        'Multiple Choice': 'multiple_choice',
+        'Legal Document Identification': 'legal_document_identification',
+        'Legal Document Writing': 'legal_document_writing',
+        'Discursive': 'discursive'
+    }
+    selected_task = st.selectbox("Tarefa:", list(task_options.keys()))
+    task_key = task_options[selected_task]
+
 # Filtrar o DataFrame para os filtros selecionados
 df_filtrado = df_scoreboard
 
 if model:
-    df_filtrado = df_filtrado.query('model == @model')
+    df_filtrado = df_filtrado[df_filtrado['model'].isin(model)]
 
 if area:
-    df_filtrado = df_filtrado.query('evaluated_area == @area')
+    df_filtrado = df_filtrado[df_filtrado['evaluated_area'].isin(area)]
 
-st.dataframe(df_filtrado, use_container_width=False)
+# Criar uma tabela dinâmica com os modelos como colunas
+st.subheader(f"{selected_task}")
 
-# Criar gráficos
-tasks = ["legal_document_identification", "legal_document_writing", "discursive"]
+# Pivotar a tabela para ter os modelos como colunas
+pivot_df = df_filtrado.pivot_table(
+    index='evaluated_area',
+    columns='model',
+    values=task_key,
+    aggfunc='mean'
+).round(2)
 
-for task in tasks:
-    st.subheader(f"Rabula- competency in  {task.replace('_',' ')}")
-    fig, ax = plt.subplots(figsize=(10, 6))
+# Adicionar coluna de vencedor
+if not pivot_df.empty and len(pivot_df.columns) > 1:
+    pivot_df['Winner'] = pivot_df.idxmax(axis=1)
 
-    # Resolver duplicatas: agrupar por evaluated_area e model e calcular a média
-    df_agrupado = df_filtrado.groupby(["evaluated_area", "model"], as_index=False)[task].mean()
+# Exibir a tabela
+st.dataframe(pivot_df, use_container_width=True)
+st.write("\n")
 
-    # Pivotar os dados para o gráfico
-    df_pivot = df_agrupado.pivot(index="evaluated_area", columns="model", values=task)
+# Criar gráfico para a tarefa selecionada
+st.subheader(f"Rabula - Competência em {selected_task}")
+fig, ax = plt.subplots(figsize=(12, 6))
 
-    # Plotar o gráfico de barras
-    df_pivot.plot(kind="bar", ax=ax)
+# Resolver duplicatas: agrupar por evaluated_area e model e calcular a média
+df_agrupado = df_filtrado.groupby(["evaluated_area", "model"], as_index=False)[task_key].mean()
 
-    ax.set_title(f"Comparing by {task}")
-    ax.set_xlabel("Evaluated Area")
-    ax.set_ylabel("Score")
-    ax.legend(title="Model")
-    st.pyplot(fig)
+# Pivotar os dados para o gráfico
+df_pivot = df_agrupado.pivot(index="evaluated_area", columns="model", values=task_key)
+
+# Plotar o gráfico de barras
+df_pivot.plot(kind="bar", ax=ax)
+
+ax.set_title(f"Comparação por {selected_task}")
+ax.set_xlabel("Área Avaliada")
+ax.set_ylabel("Pontuação")
+ax.legend(title="Modelo")
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+st.pyplot(fig)
