@@ -1,29 +1,33 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import plotly.express as px
 
 # Configuração inicial do Streamlit
 st.set_page_config(layout="wide")
 st.title("Brazilian Legal Knowledge Proficiency Benchmark")
 
 with st.spinner("Carregando arquivos..."):
-    df_scoreboard = pd.read_pickle("./data/scoreboard.pkl")
+    # Carregar os dados (certifique-se de que o caminho está correto)
+    try:
+        df_scoreboard = pd.read_pickle("./data/scoreboard.pkl")
+    except FileNotFoundError:
+        st.error("Arquivo 'scoreboard.pkl' não encontrado. Verifique o caminho para o arquivo de dados.")
+        st.stop()
 
-st.write("Competência de modelos de linguagem no domínio jurídico brasileiro.")
 
-# Dividir os checkboxes em colunas
+st.write("Competence in language models within the Brazilian legal domain.")
+
+# --- FILTROS ---
 col1, col2, col3 = st.columns(3)
-
 with col1:
-    # Multiselect de modelos na primeira coluna
-    model = st.multiselect("Modelo", df_scoreboard["model"].unique().tolist())
+    model_options = df_scoreboard["model"].unique().tolist()
+    model = st.multiselect("Modelo", model_options, default=model_options)
 
 with col2:
-    # Multiselect de áreas na segunda coluna
-    area = st.multiselect("Área: ", df_scoreboard["evaluated_area"].unique().tolist())
+    area_options = df_scoreboard["evaluated_area"].unique().tolist()
+    area = st.multiselect("Área: ", area_options)
 
 with col3:
-    # Dropdown para seleção de tarefas
     task_options = {
         'Multiple Choice': 'multiple_choice',
         'Legal Document Identification': 'legal_document_identification',
@@ -33,109 +37,114 @@ with col3:
     selected_task = st.selectbox("Tarefa:", list(task_options.keys()))
     task_key = task_options[selected_task]
 
-# Filtrar o DataFrame para os filtros selecionados
-df_filtrado = df_scoreboard
+# --- LÓGICA DA TABELA ---
 
+# Filtrar o DataFrame
+df_filtrado = df_scoreboard
 if model:
     df_filtrado = df_filtrado[df_filtrado['model'].isin(model)]
-
 if area:
     df_filtrado = df_filtrado[df_filtrado['evaluated_area'].isin(area)]
 
-# Criar uma tabela dinâmica com os modelos como colunas
-st.subheader(f"{selected_task}")
+if df_filtrado.empty:
+    st.warning("Nenhum dado encontrado para os filtros selecionados.")
+    st.stop()
 
-# Pivotar a tabela para ter os modelos como colunas
+# Criar a tabela dinâmica (pivot)
+st.subheader(f"{selected_task}")
 pivot_df = df_filtrado.pivot_table(
     index='evaluated_area',
     columns='model',
     values=task_key,
     aggfunc='mean'
-).round(2)
+)
 
-# Adicionar coluna de vencedor
+# --- CÁLCULO DE MÉDIAS E VITÓRIAS (LÓGICA CORRIGIDA) ---
+avg_row = pd.Series(name='Média', dtype=float)
+wins_row = pd.Series(name='Vitórias', dtype=int)
+win_counts = pd.Series(0, index=pivot_df.columns, dtype=int)
+
+# LÓGICA DE VITÓRIAS CORRIGIDA: Itera nas linhas para contar apenas vitórias sem empate
 if not pivot_df.empty and len(pivot_df.columns) > 1:
-    pivot_df['Winner'] = pivot_df.idxmax(axis=1)
+    for index, row in pivot_df.iterrows():
+        max_val = row.max()
+        # Conta vitória apenas se o valor máximo for único na linha (sem empates)
+        if (row == max_val).sum() == 1:
+            winner_model = row.idxmax()
+            win_counts[winner_model] += 1
 
-# Debug: Verificar colunas e valores únicos
-print("Colunas do DataFrame:", df_scoreboard.columns.tolist())
-print("Modelos únicos:", df_scoreboard['model'].unique().tolist())
-print("Valores únicos na coluna de tarefa:", df_scoreboard[task_key].unique())
+# Preencher as linhas de Média e Vitórias para cada modelo
+for col_model in pivot_df.columns:
+    model_avg = df_filtrado[df_filtrado['model'] == col_model][task_key].mean()
+    avg_row[col_model] = model_avg if pd.notnull(model_avg) else 0
+    wins_row[col_model] = win_counts.get(col_model, 0) # Usa a contagem corrigida
 
-# Calcular métricas para os cards
-try:
-    # Dados para o gpt-4o-mini
-    gpt_data = df_scoreboard[df_scoreboard['model'] == 'gpt-4o-mini']
-    gpt_avg = gpt_data[task_key].mean()
-    gpt_avg = round(gpt_avg, 2) if pd.notnull(gpt_avg) else 0.0
+# Juntar as linhas de dados com as de Média e Vitórias
+summary_df = pd.DataFrame([avg_row, wins_row])
+final_df = pd.concat([pivot_df, summary_df])
+
+# --- FORMATAÇÃO E ESTILIZAÇÃO ---
+
+# Função para aplicar cores apenas se não houver empate no valor máximo
+def highlight_winner(s):
+    if not pd.api.types.is_numeric_dtype(s):
+        return [''] * len(s)
     
-    # Dados para o sabiazinho_3
-    sabiazinho_data = df_scoreboard[df_scoreboard['model'] == 'sabiazinho_3']
-    sabiazinho_avg = sabiazinho_data[task_key].mean()
-    sabiazinho_avg = round(sabiazinho_avg, 2) if pd.notnull(sabiazinho_avg) else 0.0
+    max_val = s.max()
     
-    # Para debug
-    print(f"Média gpt-4o-mini: {gpt_avg}")
-    print(f"Média sabiazinho_3: {sabiazinho_avg}")
-    
-except Exception as e:
-    print("Erro ao calcular médias:", str(e))
-    gpt_avg = 0.0
-    sabiazinho_avg = 0.0
+    # Se houver empate no valor máximo, não colore a linha
+    if (s == max_val).sum() > 1:
+        return [''] * len(s)
+    else:
+        is_max = s == max_val
+        return ['color: #28a745' if v else 'color: #dc3545' for v in is_max]
 
-# Contar vitórias por modelo
-if not pivot_df.empty and 'Winner' in pivot_df.columns:
-    win_counts = pivot_df['Winner'].value_counts().to_dict()
-    gpt_wins = win_counts.get('gpt-4o-mini', 0)
-    sabiazinho_wins = win_counts.get('sabiazinho_3', 0)
-    
-    # Para debug
-    print(f"Vitórias gpt-4o-mini: {gpt_wins}")
-    print(f"Vitórias sabiazinho_3: {sabiazinho_wins}")
-else:
-    gpt_wins = 0
-    sabiazinho_wins = 0
+# Aplicar a estilização
+styled_df = final_df.style
 
-# Criar 3 colunas para os cards
-col1, col2, col3 = st.columns(3)
+# Aplicar coloração apenas nas linhas de dados
+data_rows = final_df.index.difference(['Média', 'Vitórias'])
+if len(final_df.columns) > 1:
+    styled_df = styled_df.apply(highlight_winner, axis=1, subset=(data_rows, final_df.columns))
 
-# Card 1: Média gpt-4o-mini
-with col1:
-    st.metric("Média gpt-4o-mini", f"{gpt_avg}")
-
-# Card 2: Média Sabiazinho 3
-with col2:
-    st.metric("Média Sabiazinho 3", f"{sabiazinho_avg}")
-
-# Card 3: Vitórias
-with col3:
-    st.markdown("Vitórias")
-    st.markdown(f"<div style='font-size: 1.6em; margin-top: -17px;'><b>GPT-4o-mini: {gpt_wins} | Sabiazinho 3: {sabiazinho_wins}</div>", unsafe_allow_html=True)
-
-# Adicionar espaço antes da tabela
-st.write("\n")
+# Formatação para remover zeros desnecessários
+format_dict = {col: "{:g}" for col in final_df.columns if pd.api.types.is_numeric_dtype(final_df[col])}
+styled_df = styled_df.format(format_dict)
 
 # Exibir a tabela
-st.dataframe(pivot_df, use_container_width=True)
+st.dataframe(styled_df, use_container_width=True)
 st.write("\n")
 
-# Criar gráfico para a tarefa selecionada
-st.subheader(f"Rabula - Competência em {selected_task}")
-fig, ax = plt.subplots(figsize=(12, 6))
+# --- GRÁFICO INTERATIVO COM PLOTLY ---
+st.subheader(f"{selected_task}")
 
-# Resolver duplicatas: agrupar por evaluated_area e model e calcular a média
+# Agrupar dados para o gráfico
 df_agrupado = df_filtrado.groupby(["evaluated_area", "model"], as_index=False)[task_key].mean()
 
-# Pivotar os dados para o gráfico
-df_pivot = df_agrupado.pivot(index="evaluated_area", columns="model", values=task_key)
-
-# Plotar o gráfico de barras
-df_pivot.plot(kind="bar", ax=ax)
-
-ax.set_title(f"Comparação por {selected_task}")
-ax.set_xlabel("Área Avaliada")
-ax.set_ylabel("Pontuação")
-ax.legend(title="Modelo")
-plt.xticks(rotation=45, ha='right')
-plt.tight_layout()
-st.pyplot(fig)
+if not df_agrupado.empty:
+    # Criar o gráfico de barras interativo
+    fig = px.bar(
+        df_agrupado,
+        x="evaluated_area",
+        y=task_key,
+        color="model",
+        barmode="group",
+        labels={
+            "evaluated_area": "Área Avaliada",
+            task_key: "Pontuação"
+        }
+    )
+    
+    # Atualizar o layout para melhorar a legibilidade
+    fig.update_layout(
+        xaxis_title=None,
+        yaxis_title=None,
+        legend_title="Modelo",
+        xaxis={'categoryorder':'total descending'}, # Opcional: ordena as áreas pela pontuação
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    
+    # Exibir o gráfico no Streamlit
+    st.plotly_chart(fig, use_container_width=True)
+else:
+    st.write("Não há dados suficientes para gerar o gráfico.")
