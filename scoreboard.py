@@ -127,7 +127,7 @@ st.dataframe(styled_df, use_container_width=True)
 st.write("\n")
 
 # --- GRÁFICO INTERATIVO COM PLOTLY ---
-st.subheader(f"Desempenho por Área - {selected_task}")
+st.subheader(f"Performance by Area - {selected_task}")
 
 # MODIFICAÇÃO: Agrupar dados para o gráfico usando o dataframe sem 'all'
 df_agrupado = df_display.groupby(["evaluated_area", "model"], as_index=False)[task_key].mean()
@@ -141,16 +141,16 @@ if not df_agrupado.empty:
         color="model",
         barmode="group",
         labels={
-            "evaluated_area": "Área Avaliada",
-            task_key: "Pontuação"
+            "evaluated_area": "Area",
+            task_key: "Score"
         }
     )
     
     # Atualizar o layout para melhorar a legibilidade
     fig.update_layout(
         xaxis_title=None,
-        yaxis_title="Pontuação",
-        legend_title="Modelo",
+        yaxis_title=None,
+        legend_title="Model",
         xaxis={'categoryorder':'total descending'},
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
